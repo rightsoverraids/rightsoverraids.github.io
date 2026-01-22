@@ -19,7 +19,7 @@ html {
 }
 
 body {
-    font-size: 17px; /* Increased from default 16px for better mobile readability */
+    font-size: 1.0625rem; /* 17px - uses relative unit to respect user font size settings */
     line-height: 1.7; /* Improved readability */
 }
 
@@ -126,16 +126,25 @@ p {
     top: 0;
 }
 
-/* Focus visible for keyboard navigation */
+/* Hero heading period accent */
+h1::after {
+    content: '';
+}
+
+/* Specific styling for hero title */
+.hero-title::after {
+    content: '.';
+    color: #D32F2F;
+}
 *:focus-visible {
     outline: 2px solid #D32F2F;
     outline-offset: 2px;
 }
 
-/* Input focus ring with red accent */
-input:focus,
-button:focus,
-a:focus {
+/* Input and interactive elements focus ring with red accent */
+input:focus-visible,
+button:focus-visible,
+a:focus-visible {
     outline: 2px solid #D32F2F;
     outline-offset: 2px;
 }
