@@ -21,63 +21,7 @@
     <link rel="icon" type="image/jpeg" href="./logo.jpg">
 
     <link rel="stylesheet" href="./assets/styles.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Fade-in animation */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Pulse animation for emergency banner */
-        @keyframes pulse-border {
-
-            0%,
-            100% {
-                border-color: #D32F2F;
-            }
-
-            50% {
-                border-color: #ff6659;
-            }
-        }
-
-        .pulse-border {
-            animation: pulse-border 2s infinite;
-        }
-
-        /* Card hover glow */
-        .card-glow:hover {
-            box-shadow: 0 10px 40px rgba(211, 47, 47, 0.2);
-        }
-
-        /* Skip to content for accessibility */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: #D32F2F;
-            color: white;
-            padding: 8px 16px;
-            z-index: 100;
-            transition: top 0.3s;
-        }
-
-        .skip-link:focus {
-            top: 0;
-        }
-    </style>
+    <script src="https://unpkg.com/lucide@0.294.0"></script>
 </head>
 
 <body class="bg-slate-50 text-slate-900 font-sans">
@@ -85,9 +29,9 @@
     <a href="#mission" class="skip-link">Skip to main content</a>
 
     <!-- Emergency Hotline Banner -->
-    <div class="bg-activist-red text-white text-center py-2 px-4 text-sm md:text-base">
-        <span class="font-bold">Emergency Hotline:</span>
-        <a href="tel:+18001234567" class="underline hover:no-underline font-mono">1-800-123-4567</a>
+    <div class="bg-activist-red text-white text-center py-3 px-4 text-base md:text-lg font-semibold pulse-cta">
+        <span class="font-bold">🚨 Emergency Hotline:</span>
+        <a href="tel:+18001234567" class="underline hover:no-underline font-mono ml-2">1-800-123-4567</a>
         <span class="hidden sm:inline"> — Available 24/7 for raid alerts</span>
     </div>
 
@@ -128,47 +72,46 @@
 
     <main id="main-content">
         <!-- Hero Section -->
-        <header class="relative bg-activist-black text-white py-12 md:py-24 lg:py-32 overflow-hidden">
+        <header class="relative bg-activist-black text-white py-16 md:py-24 lg:py-32 overflow-hidden">
             <div
                 class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1572915665846-5e26372ec407?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center mix-blend-overlay">
             </div>
             <div class="max-w-7xl mx-auto px-4 relative z-10 flex flex-col items-center text-center">
-                <div class="max-w-3xl mb-8 sm:mb-12">
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black mb-4 sm:mb-6 leading-tight">
-                        DEFEND <br />
-                        <span class="text-activist-red">OUR PEOPLE.</span>
+                <div class="max-w-3xl mb-12">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
+                        DEFEND OUR PEOPLE<span class="text-activist-red">.</span>
                     </h1>
-                    <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 mx-auto max-w-lg">
+                    <p class="text-xl sm:text-2xl md:text-2xl text-gray-300 mb-8 mx-auto max-w-2xl leading-relaxed">
                         Standing together against deportation, fascism, and unjust raids. We protect our neighbors.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
                         <a href="#rights"
-                            class="bg-activist-red hover:bg-red-700 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded text-center transition-colors flex items-center justify-center gap-2 text-sm sm:text-base">
-                            <i data-lucide="shield" width="18"></i>
+                            class="bg-activist-red hover:bg-red-700 text-white font-bold py-4 px-8 rounded text-center transition-all flex items-center justify-center gap-2 text-lg shadow-lg hover:shadow-xl hover:scale-105">
+                            <i data-lucide="shield" width="20"></i>
                             Know Your Rights
                         </a>
                         <a href="#action"
-                            class="border-2 border-white hover:bg-white hover:text-black font-bold py-3 px-6 sm:py-4 sm:px-8 rounded text-center transition-colors text-sm sm:text-base">
+                            class="border-2 border-white hover:bg-white hover:text-black font-bold py-4 px-8 rounded text-center transition-all text-lg hover:scale-102">
                             Get Involved
                         </a>
                     </div>
                 </div>
-                <div class="w-full flex justify-center">
+                <div class="w-full flex justify-center mt-8">
                     <img src="./logo.jpg" alt="Rights Over Raids Emblem"
-                        class="w-full max-w-xs md:max-w-md rounded-lg shadow-2xl border-4 border-gray-800 transform hover:scale-105 transition-transform duration-500">
+                        class="w-full max-w-sm md:max-w-md rounded-lg shadow-2xl border-4 border-gray-800 transform hover:scale-105 transition-transform duration-500">
                 </div>
             </div>
         </header>
 
         <!-- Mission Statement -->
-        <section id="mission" class="py-12 md:py-20 bg-white">
+        <section id="mission" class="py-16 md:py-24 bg-white">
             <div class="max-w-4xl mx-auto px-4 text-center">
                 <div class="inline-block p-3 bg-red-100 rounded-full mb-6">
                     <div class="text-activist-red"><i data-lucide="users" width="32" height="32"></i></div>
                 </div>
-                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-slate-900">United Against
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-slate-900">United Against
                     Oppression</h2>
-                <p class="text-base sm:text-lg md:text-xl text-slate-700 leading-relaxed">
+                <p class="text-lg sm:text-xl md:text-xl text-slate-700 leading-relaxed max-w-3xl mx-auto">
                     <span class="font-bold text-slate-900">Rights Over Raids</span> is a grassroots collective dedicated
                     to
                     pushing back against ICE agents, deportation forces, and the rising tide of fascism. We believe that
@@ -180,20 +123,19 @@
         </section>
 
         <!-- Know Your Rights Cards -->
-        <section id="rights" class="py-12 md:py-20 bg-slate-100">
+        <section id="rights" class="py-16 md:py-24 bg-slate-100">
             <div class="max-w-7xl mx-auto px-4">
                 <h2
-                    class="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center uppercase tracking-wide">
+                    class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-center uppercase tracking-wide">
                     If ICE Comes to Your Door</h2>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Card 1 -->
                     <div
-                        class="bg-white p-5 sm:p-8 rounded-lg shadow-md border-t-8 border-activist-red hover:-translate-y-2 transition-transform card-glow fade-in">
-                        <div class="text-activist-red mb-4 sm:mb-6"><i data-lucide="lock" width="36" height="36"
-                                class="sm:w-12 sm:h-12"></i></div>
-                        <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Don't Open the Door</h3>
-                        <p class="text-slate-600">
+                        class="card-gradient p-6 sm:p-8 rounded-lg shadow-lg border-2 border-activist-red hover:-translate-y-2 transition-all card-glow fade-in">
+                        <div class="text-activist-red mb-6"><i data-lucide="lock" width="32" height="32"></i></div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-4">Don't Open the Door</h3>
+                        <p class="text-slate-700 leading-relaxed">
                             ICE agents need a judicial warrant signed by a judge to enter your home. Ask them to slide
                             it
                             under the door. Administrative warrants are not enough.
@@ -202,11 +144,10 @@
 
                     <!-- Card 2 -->
                     <div
-                        class="bg-white p-5 sm:p-8 rounded-lg shadow-md border-t-8 border-activist-red hover:-translate-y-2 transition-transform card-glow fade-in">
-                        <div class="text-activist-red mb-4 sm:mb-6"><i data-lucide="mic-off" width="36" height="36"
-                                class="sm:w-12 sm:h-12"></i></div>
-                        <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Remain Silent</h3>
-                        <p class="text-slate-600">
+                        class="card-gradient p-6 sm:p-8 rounded-lg shadow-lg border-2 border-activist-red hover:-translate-y-2 transition-all card-glow fade-in">
+                        <div class="text-activist-red mb-6"><i data-lucide="mic-off" width="32" height="32"></i></div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-4">Remain Silent</h3>
+                        <p class="text-slate-700 leading-relaxed">
                             You have the right to remain silent. Say loudly: "I am exercising my right to remain
                             silent." Do
                             not answer questions about where you were born.
@@ -215,12 +156,11 @@
 
                     <!-- Card 3 -->
                     <div
-                        class="bg-white p-5 sm:p-8 rounded-lg shadow-md border-t-8 border-activist-red hover:-translate-y-2 transition-transform card-glow fade-in">
-                        <div class="text-activist-red mb-4 sm:mb-6"><i data-lucide="file-warning" width="36" height="36"
-                                class="sm:w-12 sm:h-12"></i>
+                        class="card-gradient p-6 sm:p-8 rounded-lg shadow-lg border-2 border-activist-red hover:-translate-y-2 transition-all card-glow fade-in">
+                        <div class="text-activist-red mb-6"><i data-lucide="file-warning" width="32" height="32"></i>
                         </div>
-                        <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Don't Sign Anything</h3>
-                        <p class="text-slate-600">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-4">Don't Sign Anything</h3>
+                        <p class="text-slate-700 leading-relaxed">
                             Do not sign any documents without speaking to a lawyer first. You might be signing away your
                             rights or agreeing to your own deportation.
                         </p>
@@ -228,11 +168,10 @@
 
                     <!-- Card 4 -->
                     <div
-                        class="bg-white p-5 sm:p-8 rounded-lg shadow-md border-t-8 border-activist-red hover:-translate-y-2 transition-transform card-glow fade-in">
-                        <div class="text-activist-red mb-4 sm:mb-6"><i data-lucide="shield" width="36" height="36"
-                                class="sm:w-12 sm:h-12"></i></div>
-                        <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Ask For A Lawyer</h3>
-                        <p class="text-slate-600">
+                        class="card-gradient p-6 sm:p-8 rounded-lg shadow-lg border-2 border-activist-red hover:-translate-y-2 transition-all card-glow fade-in">
+                        <div class="text-activist-red mb-6"><i data-lucide="shield" width="32" height="32"></i></div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-4">Ask For A Lawyer</h3>
+                        <p class="text-slate-700 leading-relaxed">
                             You have the right to speak to an attorney. If you are detained, ask to make a phone call to
                             a
                             lawyer or family member immediately.
@@ -243,19 +182,19 @@
         </section>
 
         <!-- Stats/Impact -->
-        <section class="py-10 sm:py-12 md:py-16 bg-activist-black text-white">
-            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-center">
+        <section class="py-16 md:py-24 bg-activist-black text-white">
+            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 text-center">
                 <div>
-                    <div class="text-4xl sm:text-5xl font-black text-activist-red mb-1 sm:mb-2">24/7</div>
-                    <p class="text-base sm:text-xl text-gray-400">Rapid Response Network</p>
+                    <div class="text-5xl sm:text-6xl md:text-7xl font-black text-activist-red mb-3">24/7</div>
+                    <p class="text-lg sm:text-xl md:text-2xl text-gray-300">Rapid Response Network</p>
                 </div>
                 <div>
-                    <div class="text-4xl sm:text-5xl font-black text-activist-red mb-1 sm:mb-2">100+</div>
-                    <p class="text-base sm:text-xl text-gray-400">Communities Trained</p>
+                    <div class="text-5xl sm:text-6xl md:text-7xl font-black text-activist-red mb-3">100+</div>
+                    <p class="text-lg sm:text-xl md:text-2xl text-gray-300">Communities Trained</p>
                 </div>
                 <div>
-                    <div class="text-4xl sm:text-5xl font-black text-activist-red mb-1 sm:mb-2">ZERO</div>
-                    <p class="text-base sm:text-xl text-gray-400">Tolerance for Fascism</p>
+                    <div class="text-5xl sm:text-6xl md:text-7xl font-black text-activist-red mb-3">ZERO</div>
+                    <p class="text-lg sm:text-xl md:text-2xl text-gray-300">Tolerance for Fascism</p>
                 </div>
             </div>
         </section>
@@ -265,17 +204,17 @@
             <div class="max-w-3xl mx-auto px-4 text-center">
                 <div class="mx-auto text-yellow-500 mb-6 flex justify-center"><i data-lucide="alert-triangle" width="48"
                         height="48"></i></div>
-                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">The Fight Continues</h2>
-                <p class="text-base sm:text-lg text-slate-600 mb-6 sm:mb-8">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">The Fight Continues</h2>
+                <p class="text-lg sm:text-xl text-slate-700 mb-8 leading-relaxed">
                     We need your voice and your presence. Join our mailing list to get alerts about raids, protests, and
                     community actions.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-md mx-auto">
-                    <input type="email" placeholder="Enter your email"
-                        class="flex-1 px-4 sm:px-6 py-3 sm:py-4 rounded bg-slate-100 border-2 border-slate-300 focus:outline-none focus:border-activist-red text-base" />
+                <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Enter your email" aria-label="Email address"
+                        class="flex-1 px-6 py-4 rounded bg-slate-100 border-2 border-slate-400 focus:outline-none focus:border-activist-red focus:ring-2 focus:ring-activist-red text-base transition-all" />
                     <button
-                        class="bg-black hover:bg-slate-800 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded transition-colors flex items-center justify-center text-sm sm:text-base">
-                        Join Us <i data-lucide="chevron-right" width="18"></i>
+                        class="bg-black hover:bg-slate-800 text-white font-bold py-4 px-8 rounded transition-all flex items-center justify-center text-base hover:scale-105 shadow-lg hover:shadow-xl">
+                        Join Us <i data-lucide="chevron-right" width="18" class="ml-1"></i>
                     </button>
                 </div>
                 <p class="mt-4 text-sm text-slate-500">We will never share your information. Safety first.</p>
@@ -283,32 +222,32 @@
         </section>
 
         <!-- Resources Links -->
-        <section id="resources" class="py-12 md:py-16 bg-slate-50 border-t border-slate-200">
+        <section id="resources" class="py-16 md:py-24 bg-slate-50 border-t-2 border-slate-300">
             <div class="max-w-7xl mx-auto px-4">
-                <h2 class="text-2xl font-bold mb-8">Community Resources</h2>
+                <h2 class="text-3xl font-bold mb-10 text-slate-900">Community Resources</h2>
                 <div class="grid md:grid-cols-3 gap-6">
                     <a href="#"
-                        class="flex items-center p-6 bg-white rounded shadow hover:shadow-lg transition-shadow border-l-4 border-blue-500">
-                        <div class="mr-4 text-slate-500"><i data-lucide="book-open"></i></div>
+                        class="flex items-center p-6 bg-white rounded shadow-lg hover:shadow-xl transition-all border-l-4 border-blue-500 hover:-translate-y-1">
+                        <div class="mr-4 text-blue-500"><i data-lucide="book-open" width="24" height="24"></i></div>
                         <div>
-                            <h4 class="font-bold">Legal Aid Directory</h4>
-                            <p class="text-sm text-slate-500">Find free or low-cost legal help</p>
+                            <h4 class="font-bold text-slate-900">Legal Aid Directory</h4>
+                            <p class="text-sm text-slate-600">Find free or low-cost legal help</p>
                         </div>
                     </a>
                     <a href="#"
-                        class="flex items-center p-6 bg-white rounded shadow hover:shadow-lg transition-shadow border-l-4 border-green-500">
-                        <div class="mr-4 text-slate-500"><i data-lucide="users"></i></div>
+                        class="flex items-center p-6 bg-white rounded shadow-lg hover:shadow-xl transition-all border-l-4 border-green-500 hover:-translate-y-1">
+                        <div class="mr-4 text-green-500"><i data-lucide="users" width="24" height="24"></i></div>
                         <div>
-                            <h4 class="font-bold">Family Prep Plan</h4>
-                            <p class="text-sm text-slate-500">Prepare your family for emergencies</p>
+                            <h4 class="font-bold text-slate-900">Family Prep Plan</h4>
+                            <p class="text-sm text-slate-600">Prepare your family for emergencies</p>
                         </div>
                     </a>
                     <a href="#"
-                        class="flex items-center p-6 bg-white rounded shadow hover:shadow-lg transition-shadow border-l-4 border-purple-500">
-                        <div class="mr-4 text-slate-500"><i data-lucide="shield"></i></div>
+                        class="flex items-center p-6 bg-white rounded shadow-lg hover:shadow-xl transition-all border-l-4 border-purple-500 hover:-translate-y-1">
+                        <div class="mr-4 text-purple-500"><i data-lucide="shield" width="24" height="24"></i></div>
                         <div>
-                            <h4 class="font-bold">Report a Raid</h4>
-                            <p class="text-sm text-slate-500">Secure hotline numbers</p>
+                            <h4 class="font-bold text-slate-900">Report a Raid</h4>
+                            <p class="text-sm text-slate-600">Secure hotline numbers</p>
                         </div>
                     </a>
                 </div>
@@ -316,14 +255,14 @@
         </section>
 
         <!-- Downloadable Know Your Rights Card -->
-        <section class="py-8 bg-activist-black text-white">
+        <section class="py-12 md:py-16 bg-activist-black text-white">
             <div class="max-w-3xl mx-auto px-4 text-center">
-                <div class="border-2 border-dashed border-gray-600 rounded-lg p-6 pulse-border">
-                    <i data-lucide="download" class="mx-auto mb-4 text-activist-red" width="32" height="32"></i>
-                    <h3 class="text-xl font-bold mb-2">Download Your Rights Card</h3>
-                    <p class="text-gray-400 mb-4">Print this card and keep it with you at all times</p>
+                <div class="border-2 border-dashed border-activist-red rounded-lg p-8 md:p-10 pulse-border bg-gradient-to-br from-transparent to-red-900/10">
+                    <i data-lucide="download" class="mx-auto mb-4 text-activist-red" width="40" height="40"></i>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-3">Download Your Rights Card</h3>
+                    <p class="text-gray-300 text-lg mb-6">Print this card and keep it with you at all times</p>
                     <a href="#"
-                        class="inline-block bg-activist-red hover:bg-red-700 text-white font-bold py-3 px-6 rounded transition-colors">
+                        class="inline-block bg-activist-red hover:bg-red-700 text-white font-bold py-4 px-8 rounded transition-all text-lg shadow-lg hover:shadow-xl hover:scale-105">
                         Download PDF (English/Spanish)
                     </a>
                 </div>
@@ -332,19 +271,27 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-zinc-900 text-slate-400 py-12">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-            <div class="flex items-center space-x-3 mb-4 md:mb-0">
-                <span class="font-bold text-white uppercase tracking-wider">Rights Over Raids</span>
+    <footer class="bg-zinc-900 text-slate-400 py-16 border-t-4 border-activist-red">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="flex items-center space-x-3 mb-6 md:mb-0">
+                    <span class="font-bold text-white uppercase tracking-wider text-xl">Rights Over Raids</span>
+                </div>
+                <div class="flex space-x-8">
+                    <a href="#" class="hover:text-white transition-colors hover:scale-110 transform duration-200" aria-label="Twitter">
+                        <i data-lucide="twitter" width="24" height="24"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition-colors hover:scale-110 transform duration-200" aria-label="Instagram">
+                        <i data-lucide="instagram" width="24" height="24"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition-colors hover:scale-110 transform duration-200" aria-label="Contact">
+                        <i data-lucide="mail" width="24" height="24"></i>
+                    </a>
+                </div>
             </div>
-            <div class="flex space-x-6">
-                <a href="#" class="hover:text-white transition-colors">Twitter</a>
-                <a href="#" class="hover:text-white transition-colors">Instagram</a>
-                <a href="#" class="hover:text-white transition-colors">Contact</a>
+            <div class="text-center md:text-left">
+                <p class="text-sm">© 2026 Rights Over Raids. All Power to the People.</p>
             </div>
-        </div>
-        <div class="max-w-7xl mx-auto px-4 mt-8 text-center md:text-left text-sm">
-            <p>© 2026 Rights Over Raids. All Power to the People.</p>
         </div>
     </footer>
 
