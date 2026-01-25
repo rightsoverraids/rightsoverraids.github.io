@@ -58,13 +58,13 @@
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="menu-btn" class="p-2" aria-label="Toggle menu">
-                        <svg class="icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <button id="menu-btn" class="p-2" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <svg class="icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <line x1="4" x2="20" y1="12" y2="12"></line>
                             <line x1="4" x2="20" y1="6" y2="6"></line>
                             <line x1="4" x2="20" y1="18" y2="18"></line>
                         </svg>
-                        <svg class="icon-close hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="icon-close hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M18 6 6 18"></path>
                             <path d="m6 6 12 12"></path>
                         </svg>
@@ -74,13 +74,13 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 pb-4">
-            <a href="#mission" class="block py-3 px-6 hover:bg-zinc-800 mobile-link">Mission</a>
-            <a href="#rights" class="block py-3 px-6 hover:bg-zinc-800 mobile-link">Know Your Rights</a>
-            <a href="#abolish" class="block py-3 px-6 hover:bg-zinc-800 mobile-link">Abolish ICE</a>
-            <a href="#action" class="block py-3 px-6 hover:bg-zinc-800 mobile-link">Take Action</a>
-            <a href="#donate" class="block py-3 px-6 hover:bg-zinc-800 mobile-link">Donate</a>
-            <a href="#resources" class="block py-3 px-6 hover:bg-zinc-800 mobile-link">Resources</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 pb-4" role="menu" aria-labelledby="menu-btn">
+            <a href="#mission" class="block py-3 px-6 hover:bg-zinc-800 mobile-link" role="menuitem">Mission</a>
+            <a href="#rights" class="block py-3 px-6 hover:bg-zinc-800 mobile-link" role="menuitem">Know Your Rights</a>
+            <a href="#abolish" class="block py-3 px-6 hover:bg-zinc-800 mobile-link" role="menuitem">Abolish ICE</a>
+            <a href="#action" class="block py-3 px-6 hover:bg-zinc-800 mobile-link" role="menuitem">Take Action</a>
+            <a href="#donate" class="block py-3 px-6 hover:bg-zinc-800 mobile-link" role="menuitem">Donate</a>
+            <a href="#resources" class="block py-3 px-6 hover:bg-zinc-800 mobile-link" role="menuitem">Resources</a>
         </div>
     </nav>
 
@@ -404,17 +404,17 @@
                     We need your voice and your presence. Join our mailing list to get alerts about raids, protests, and
                     community actions, and learn how to support abolition campaigns.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                    <input type="email" placeholder="Enter your email" aria-label="Email address"
+                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" onsubmit="return handleEmailSubmit(event)">
+                    <input type="email" id="email-input" placeholder="Enter your email" aria-label="Email address" required
                         class="flex-1 px-6 py-4 rounded-xl bg-slate-50 input-border text-base transition-all" />
-                    <button class="btn-primary whitespace-nowrap">
+                    <button type="submit" class="btn-primary whitespace-nowrap">
                         Join Us
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1" aria-hidden="true">
                             <path d="M5 12h14"></path>
                             <path d="m12 5 7 7-7 7"></path>
                         </svg>
                     </button>
-                </div>
+                </form>
                 <p class="mt-4 text-sm text-slate-500">We will never share your information. Safety first.</p>
                 <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="https://immigrantjustice.org/for-immigrants/know-your-rights/ice-encounter/"
@@ -614,8 +614,9 @@
         const iconClose = menuBtn.querySelector('.icon-close');
         let isMenuOpen = false;
 
-        menuBtn.addEventListener('click', () => {
-            isMenuOpen = !isMenuOpen;
+        function toggleMenu(open) {
+            isMenuOpen = open;
+            menuBtn.setAttribute('aria-expanded', isMenuOpen);
             if (isMenuOpen) {
                 mobileMenu.classList.remove('hidden');
                 iconMenu.classList.add('hidden');
@@ -625,16 +626,28 @@
                 iconMenu.classList.remove('hidden');
                 iconClose.classList.add('hidden');
             }
+        }
+
+        menuBtn.addEventListener('click', () => {
+            toggleMenu(!isMenuOpen);
         });
 
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
-                isMenuOpen = false;
-                mobileMenu.classList.add('hidden');
-                iconMenu.classList.remove('hidden');
-                iconClose.classList.add('hidden');
+                toggleMenu(false);
             });
         });
+
+        // Email form submission handler
+        function handleEmailSubmit(event) {
+            event.preventDefault();
+            const email = document.getElementById('email-input').value;
+            if (email) {
+                alert('Thank you for joining! We will keep you informed about community actions.');
+                document.getElementById('email-input').value = '';
+            }
+            return false;
+        }
 
         // Scroll-triggered fade-in animations
         const observerOptions = {
