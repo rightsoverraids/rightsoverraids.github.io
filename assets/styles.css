@@ -305,10 +305,21 @@ p {
 }
 
 /* ========================================
+   CTA GRADIENT SECTION
+   ======================================== */
+.cta-gradient {
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 50%, #16213e 100%);
+}
+
+/* ========================================
    FOOTER
    ======================================== */
 .footer-gradient {
     background: linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
+}
+
+.footer-logo-border {
+    border: 2px solid rgba(211, 47, 47, 0.3);
 }
 
 .social-icon {
@@ -329,6 +340,52 @@ p {
     border-color: rgba(211, 47, 47, 0.3);
     color: #D32F2F;
     transform: translateY(-2px);
+}
+
+/* ========================================
+   ADDITIONAL UTILITY CLASSES
+   ======================================== */
+.nav-logo-border {
+    border: 2px solid rgba(211, 47, 47, 0.5);
+}
+
+.nav-logo-text {
+    background: linear-gradient(to right, #ffffff, #d1d5db);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-badge {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-logo-border {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.section-badge {
+    background: rgba(211, 47, 47, 0.1);
+}
+
+.input-border {
+    border: 2px solid #e2e8f0;
+}
+
+.input-border:focus {
+    border-color: #D32F2F;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.1);
+}
+
+.stat-number {
+    background: linear-gradient(to right, #D32F2F, #f87171);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 /* ========================================
