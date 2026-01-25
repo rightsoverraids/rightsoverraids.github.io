@@ -28,19 +28,22 @@
     <!-- Skip to main content for accessibility -->
     <a href="#mission" class="skip-link">Skip to main content</a>
 
-    <!-- Emergency Hotline Banner -->
-    <div class="bg-activist-red text-white text-center py-3 px-4 text-base md:text-lg font-semibold pulse-cta">
-        <span class="font-bold">🚨 Emergency Hotline:</span>
-        <a href="tel:+18001234567" class="underline hover:no-underline font-mono ml-2">1-800-123-4567</a>
-        <span class="hidden sm:inline"> — Available 24/7 for raid alerts</span>
+    <!-- Emergency Alert Banner -->
+    <div class="alert-banner bg-gradient-to-r from-activist-red via-red-600 to-activist-red text-white text-center py-3 px-4 text-base md:text-lg font-semibold">
+        <span class="inline-flex items-center gap-2">
+            <span class="pulse-dot"></span>
+            <span class="font-bold">🛡️ Know Your Rights</span>
+            <span class="hidden sm:inline">— Protect yourself and your community</span>
+        </span>
     </div>
 
     <!-- Navigation -->
-    <nav class="bg-activist-black text-white sticky top-0 z-50 shadow-lg">
+    <nav class="nav-glass text-white sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 sm:h-20">
                 <div class="flex items-center space-x-2 sm:space-x-3">
-                    <span class="font-bold text-sm sm:text-base md:text-xl tracking-wider uppercase">Rights Over
+                    <img src="./logo.jpg" alt="Rights Over Raids" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-activist-red/50">
+                    <span class="font-bold text-sm sm:text-base md:text-xl tracking-wider uppercase bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Rights Over
                         Raids</span>
                 </div>
 
@@ -76,16 +79,19 @@
 
     <main id="main-content">
         <!-- Hero Section -->
-        <header class="relative bg-activist-black text-white py-16 md:py-24 lg:py-32 overflow-hidden">
-            <div
-                class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1572915665846-5e26372ec407?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center mix-blend-overlay">
-            </div>
+        <header class="relative hero-gradient text-white py-20 md:py-28 lg:py-36 overflow-hidden">
+            <div class="hero-pattern absolute inset-0 opacity-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30"></div>
             <div class="max-w-7xl mx-auto px-4 relative z-10 flex flex-col items-center text-center">
                 <div class="max-w-3xl mb-12">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
+                        <span class="pulse-dot"></span>
+                        <span class="text-sm font-medium tracking-wide">Standing Together for Justice</span>
+                    </div>
                     <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight hero-title">
                         DEFEND OUR PEOPLE
                     </h1>
-                    <p class="text-xl sm:text-2xl md:text-2xl text-gray-300 mb-8 mx-auto max-w-2xl leading-relaxed">
+                    <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-10 mx-auto max-w-2xl leading-relaxed">
                         Standing together against deportation, fascism, and unjust raids. Abolish ICE and protect our
                         neighbors.
                     </p>
@@ -100,21 +106,24 @@
                     </div>
                 </div>
                 <div class="w-full flex justify-center mt-8">
-                    <img src="./logo.jpg" alt="Rights Over Raids Emblem"
-                        class="w-full max-w-sm md:max-w-md rounded-lg shadow-2xl border-4 border-gray-800 transform hover:scale-105 transition-transform duration-500">
+                    <div class="logo-container">
+                        <img src="./logo.jpg" alt="Rights Over Raids Emblem"
+                            class="w-full max-w-xs md:max-w-sm rounded-2xl shadow-2xl border-2 border-white/20 transform hover:scale-105 transition-all duration-500">
+                    </div>
                 </div>
             </div>
         </header>
 
         <!-- Mission Statement -->
-        <section id="mission" class="py-16 md:py-24 bg-white">
-            <div class="max-w-4xl mx-auto px-4 text-center">
-                <div class="inline-block p-3 bg-red-100 rounded-full mb-6">
+        <section id="mission" class="py-20 md:py-28 bg-white relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-red-50/50 to-transparent"></div>
+            <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-red-100 to-red-50 rounded-2xl mb-8 shadow-lg shadow-red-100">
                     <div class="text-activist-red"><i data-lucide="users" width="32" height="32"></i></div>
                 </div>
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-slate-900">United Against
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-slate-900">United Against
                     Oppression</h2>
-                <p class="text-lg sm:text-xl md:text-xl text-slate-700 leading-relaxed max-w-3xl mx-auto">
+                <p class="text-lg sm:text-xl md:text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
                     <span class="font-bold text-slate-900">Rights Over Raids</span> is a grassroots collective dedicated
                     to
                     pushing back against ICE agents, deportation forces, and the rising tide of fascism. We believe that
@@ -126,51 +135,73 @@
         </section>
 
         <!-- Abolish ICE -->
-        <section id="abolish" class="py-16 md:py-24 bg-slate-50 border-t-2 border-slate-200">
+        <section id="abolish" class="py-20 md:py-28 bg-slate-50">
             <div class="max-w-6xl mx-auto px-4">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <div class="inline-block p-3 bg-red-100 rounded-full mb-6">
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-red-100 to-red-50 rounded-2xl mb-8 shadow-lg shadow-red-100">
                         <div class="text-activist-red"><i data-lucide="ban" width="32" height="32"></i></div>
                     </div>
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-slate-900 uppercase tracking-wide">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-slate-900 uppercase tracking-wide">
                         Abolish ICE</h2>
-                    <p class="text-lg sm:text-xl text-slate-700 leading-relaxed">
+                    <p class="text-lg sm:text-xl text-slate-600 leading-relaxed">
                         ICE was created in 2003 and expanded a detention-and-deportation system that tears families
                         apart. Our communities demand safety built on dignity, not cages and raids.
                     </p>
                 </div>
                 <div class="grid md:grid-cols-2 gap-8">
-                    <div class="card-surface rounded-lg p-6 sm:p-8 border-l-4 border-activist-red">
-                        <h3 class="text-2xl font-bold mb-4 text-slate-900">Policy Demands</h3>
-                        <ul class="space-y-3 text-slate-700">
-                            <li><span class="font-semibold text-slate-900">End deportations:</span> stop workplace raids,
-                                home raids, and collaboration with local police.</li>
-                            <li><span class="font-semibold text-slate-900">Close detention centers:</span> release people
-                                held in ICE custody and end detention contracts.</li>
-                            <li><span class="font-semibold text-slate-900">Invest in care:</span> fund housing, legal
-                                aid, healthcare, and community-based support.</li>
+                    <div class="modern-card rounded-2xl p-8 sm:p-10">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-activist-red to-red-600 flex items-center justify-center text-white">
+                                <i data-lucide="scroll-text" width="20" height="20"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900">Policy Demands</h3>
+                        </div>
+                        <ul class="space-y-4 text-slate-600">
+                            <li class="flex items-start gap-3">
+                                <span class="w-2 h-2 rounded-full bg-activist-red mt-2 flex-shrink-0"></span>
+                                <span><span class="font-semibold text-slate-900">End deportations:</span> stop workplace raids, home raids, and collaboration with local police.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-2 h-2 rounded-full bg-activist-red mt-2 flex-shrink-0"></span>
+                                <span><span class="font-semibold text-slate-900">Close detention centers:</span> release people held in ICE custody and end detention contracts.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-2 h-2 rounded-full bg-activist-red mt-2 flex-shrink-0"></span>
+                                <span><span class="font-semibold text-slate-900">Invest in care:</span> fund housing, legal aid, healthcare, and community-based support.</span>
+                            </li>
                         </ul>
                     </div>
-                    <div class="card-surface rounded-lg p-6 sm:p-8 border-l-4 border-activist-red">
-                        <h3 class="text-2xl font-bold mb-4 text-slate-900">Why It Matters</h3>
-                        <ul class="space-y-3 text-slate-700">
-                            <li><span class="font-semibold text-slate-900">Abolition is safety:</span> communities are
-                                safer when families stay together.</li>
-                            <li><span class="font-semibold text-slate-900">Rights for all:</span> no one should face
-                                detention for seeking a future.</li>
-                            <li><span class="font-semibold text-slate-900">Community power:</span> grassroots networks
-                                protect neighbors when ICE targets them.</li>
+                    <div class="modern-card rounded-2xl p-8 sm:p-10">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-activist-red to-red-600 flex items-center justify-center text-white">
+                                <i data-lucide="heart-handshake" width="20" height="20"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900">Why It Matters</h3>
+                        </div>
+                        <ul class="space-y-4 text-slate-600">
+                            <li class="flex items-start gap-3">
+                                <span class="w-2 h-2 rounded-full bg-activist-red mt-2 flex-shrink-0"></span>
+                                <span><span class="font-semibold text-slate-900">Abolition is safety:</span> communities are safer when families stay together.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-2 h-2 rounded-full bg-activist-red mt-2 flex-shrink-0"></span>
+                                <span><span class="font-semibold text-slate-900">Rights for all:</span> no one should face detention for seeking a future.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-2 h-2 rounded-full bg-activist-red mt-2 flex-shrink-0"></span>
+                                <span><span class="font-semibold text-slate-900">Community power:</span> grassroots networks protect neighbors when ICE targets them.</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="https://fuckice.org/" target="_blank" rel="noopener noreferrer"
-                        class="bg-activist-red hover:bg-red-700 text-white font-bold py-3 px-6 rounded transition-all text-center shadow-lg hover:shadow-xl">
+                        class="btn-primary">
                         Read the Abolition Case
                     </a>
                     <a href="https://wearecasa.org/policy-agenda/immigration/abolishice/" target="_blank"
                         rel="noopener noreferrer"
-                        class="border-2 border-activist-red text-activist-red hover:bg-activist-red hover:text-white font-bold py-3 px-6 rounded transition-all text-center">
+                        class="btn-outline">
                         See CASA Policy Agenda
                     </a>
                 </div>
@@ -178,82 +209,106 @@
         </section>
 
         <!-- Know Your Rights Cards -->
-        <section id="rights" class="py-16 md:py-24 bg-slate-100">
+        <section id="rights" class="py-20 md:py-28 bg-gradient-to-br from-slate-100 to-slate-50">
             <div class="max-w-7xl mx-auto px-4">
-                <h2
-                    class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-center uppercase tracking-wide">
-                    If ICE Comes to Your Door</h2>
+                <div class="text-center mb-14">
+                    <span class="inline-block px-4 py-2 rounded-full bg-activist-red/10 text-activist-red font-semibold text-sm mb-4">PROTECT YOURSELF</span>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold uppercase tracking-wide text-slate-900">
+                        If ICE Comes to Your Door</h2>
+                </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Card 1 -->
-                    <div
-                        class="card-gradient p-6 sm:p-8 rounded-lg shadow-lg border-2 border-activist-red hover:-translate-y-2 transition-all card-glow fade-in">
-                        <div class="text-activist-red mb-6"><i data-lucide="lock" width="32" height="32"></i></div>
-                        <h3 class="text-xl sm:text-2xl font-bold mb-4">Don't Open the Door</h3>
-                        <p class="text-slate-700 leading-relaxed">
+                    <div class="rights-card group fade-in">
+                        <div class="card-icon-wrapper">
+                            <i data-lucide="lock" width="28" height="28"></i>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-4 text-slate-900">Don't Open the Door</h3>
+                        <p class="text-slate-600 leading-relaxed">
                             ICE agents need a judicial warrant signed by a judge to enter your home. Ask them to slide
-                            it
-                            under the door. Administrative warrants are not enough.
+                            it under the door. Administrative warrants are not enough.
                         </p>
                     </div>
 
                     <!-- Card 2 -->
-                    <div
-                        class="card-gradient p-6 sm:p-8 rounded-lg shadow-lg border-2 border-activist-red hover:-translate-y-2 transition-all card-glow fade-in">
-                        <div class="text-activist-red mb-6"><i data-lucide="mic-off" width="32" height="32"></i></div>
-                        <h3 class="text-xl sm:text-2xl font-bold mb-4">Remain Silent</h3>
-                        <p class="text-slate-700 leading-relaxed">
+                    <div class="rights-card group fade-in">
+                        <div class="card-icon-wrapper">
+                            <i data-lucide="mic-off" width="28" height="28"></i>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-4 text-slate-900">Remain Silent</h3>
+                        <p class="text-slate-600 leading-relaxed">
                             You have the right to remain silent. Say loudly: "I am exercising my right to remain
-                            silent." Do
-                            not answer questions about where you were born.
+                            silent." Do not answer questions about where you were born.
                         </p>
                     </div>
 
                     <!-- Card 3 -->
-                    <div
-                        class="card-gradient p-6 sm:p-8 rounded-lg shadow-lg border-2 border-activist-red hover:-translate-y-2 transition-all card-glow fade-in">
-                        <div class="text-activist-red mb-6"><i data-lucide="file-warning" width="32" height="32"></i>
+                    <div class="rights-card group fade-in">
+                        <div class="card-icon-wrapper">
+                            <i data-lucide="file-warning" width="28" height="28"></i>
                         </div>
-                        <h3 class="text-xl sm:text-2xl font-bold mb-4">Don't Sign Anything</h3>
-                        <p class="text-slate-700 leading-relaxed">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-4 text-slate-900">Don't Sign Anything</h3>
+                        <p class="text-slate-600 leading-relaxed">
                             Do not sign any documents without speaking to a lawyer first. You might be signing away your
                             rights or agreeing to your own deportation.
                         </p>
                     </div>
 
                     <!-- Card 4 -->
-                    <div
-                        class="card-gradient p-6 sm:p-8 rounded-lg shadow-lg border-2 border-activist-red hover:-translate-y-2 transition-all card-glow fade-in">
-                        <div class="text-activist-red mb-6"><i data-lucide="shield" width="32" height="32"></i></div>
-                        <h3 class="text-xl sm:text-2xl font-bold mb-4">Ask For A Lawyer</h3>
-                        <p class="text-slate-700 leading-relaxed">
+                    <div class="rights-card group fade-in">
+                        <div class="card-icon-wrapper">
+                            <i data-lucide="shield" width="28" height="28"></i>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-4 text-slate-900">Ask For A Lawyer</h3>
+                        <p class="text-slate-600 leading-relaxed">
                             You have the right to speak to an attorney. If you are detained, ask to make a phone call to
-                            a
-                            lawyer or family member immediately.
+                            a lawyer or family member immediately.
                         </p>
                     </div>
                 </div>
-                <div class="mt-12 grid md:grid-cols-2 gap-8">
-                    <div class="card-surface rounded-lg p-6 sm:p-8 border-l-4 border-activist-red">
-                        <h3 class="text-2xl font-bold mb-4 text-slate-900">If ICE Stops You in Public</h3>
-                        <ul class="space-y-3 text-slate-700">
-                            <li><span class="font-semibold text-slate-900">Ask if you can leave:</span> say, “Am I free
-                                to go?” If yes, walk away calmly.</li>
-                            <li><span class="font-semibold text-slate-900">Do not consent:</span> you can refuse a search
-                                of your body, phone, or belongings.</li>
-                            <li><span class="font-semibold text-slate-900">Record safely:</span> take notes or video from
-                                a safe distance if possible.</li>
+                <div class="mt-14 grid md:grid-cols-2 gap-8">
+                    <div class="modern-card rounded-2xl p-8">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white">
+                                <i data-lucide="map-pin" width="20" height="20"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900">If ICE Stops You in Public</h3>
+                        </div>
+                        <ul class="space-y-4 text-slate-600">
+                            <li class="flex items-start gap-3">
+                                <span class="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0"></span>
+                                <span><span class="font-semibold text-slate-900">Ask if you can leave:</span> say, "Am I free to go?" If yes, walk away calmly.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0"></span>
+                                <span><span class="font-semibold text-slate-900">Do not consent:</span> you can refuse a search of your body, phone, or belongings.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0"></span>
+                                <span><span class="font-semibold text-slate-900">Record safely:</span> take notes or video from a safe distance if possible.</span>
+                            </li>
                         </ul>
                     </div>
-                    <div class="card-surface rounded-lg p-6 sm:p-8 border-l-4 border-activist-red">
-                        <h3 class="text-2xl font-bold mb-4 text-slate-900">If ICE Detains You</h3>
-                        <ul class="space-y-3 text-slate-700">
-                            <li><span class="font-semibold text-slate-900">Say you want a lawyer:</span> do not sign
-                                documents without legal advice.</li>
-                            <li><span class="font-semibold text-slate-900">Do not lie:</span> stay silent instead of
-                                guessing or giving false information.</li>
-                            <li><span class="font-semibold text-slate-900">Call your support:</span> ask for a phone
-                                call to family, a lawyer, or a trusted hotline.</li>
+                    <div class="modern-card rounded-2xl p-8">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center text-white">
+                                <i data-lucide="alert-triangle" width="20" height="20"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900">If ICE Detains You</h3>
+                        </div>
+                        <ul class="space-y-4 text-slate-600">
+                            <li class="flex items-start gap-3">
+                                <span class="w-2 h-2 rounded-full bg-amber-500 mt-2 flex-shrink-0"></span>
+                                <span><span class="font-semibold text-slate-900">Say you want a lawyer:</span> do not sign documents without legal advice.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-2 h-2 rounded-full bg-amber-500 mt-2 flex-shrink-0"></span>
+                                <span><span class="font-semibold text-slate-900">Do not lie:</span> stay silent instead of guessing or giving false information.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-2 h-2 rounded-full bg-amber-500 mt-2 flex-shrink-0"></span>
+                                <span><span class="font-semibold text-slate-900">Call your support:</span> ask for a phone call to family, a lawyer, or a trusted hotline.</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -261,50 +316,53 @@
         </section>
 
         <!-- Stats/Impact -->
-        <section class="py-16 md:py-24 bg-activist-black text-white">
-            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 text-center">
-                <div>
-                    <div class="text-5xl sm:text-6xl md:text-7xl font-black text-activist-red mb-3">24/7</div>
+        <section class="py-20 md:py-28 stats-section text-white relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 text-center relative z-10">
+                <div class="stat-card p-8 rounded-2xl">
+                    <div class="text-5xl sm:text-6xl md:text-7xl font-black bg-gradient-to-r from-activist-red to-red-400 bg-clip-text text-transparent mb-3">24/7</div>
                     <p class="text-lg sm:text-xl md:text-2xl text-gray-300">Rapid Response Network</p>
                 </div>
-                <div>
-                    <div class="text-5xl sm:text-6xl md:text-7xl font-black text-activist-red mb-3">100+</div>
+                <div class="stat-card p-8 rounded-2xl">
+                    <div class="text-5xl sm:text-6xl md:text-7xl font-black bg-gradient-to-r from-activist-red to-red-400 bg-clip-text text-transparent mb-3">100+</div>
                     <p class="text-lg sm:text-xl md:text-2xl text-gray-300">Communities Trained</p>
                 </div>
-                <div>
-                    <div class="text-5xl sm:text-6xl md:text-7xl font-black text-activist-red mb-3">ZERO</div>
+                <div class="stat-card p-8 rounded-2xl">
+                    <div class="text-5xl sm:text-6xl md:text-7xl font-black bg-gradient-to-r from-activist-red to-red-400 bg-clip-text text-transparent mb-3">ZERO</div>
                     <p class="text-lg sm:text-xl md:text-2xl text-gray-300">Tolerance for Fascism</p>
                 </div>
             </div>
         </section>
 
         <!-- Action / Newsletter -->
-        <section id="action" class="py-16 md:py-24 bg-white">
-            <div class="max-w-3xl mx-auto px-4 text-center">
-                <div class="mx-auto text-yellow-500 mb-6 flex justify-center"><i data-lucide="alert-triangle" width="48"
-                        height="48"></i></div>
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">The Fight Continues</h2>
-                <p class="text-lg sm:text-xl text-slate-700 mb-8 leading-relaxed">
+        <section id="action" class="py-20 md:py-28 bg-white relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-50/50 to-transparent"></div>
+            <div class="max-w-3xl mx-auto px-4 text-center relative z-10">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-amber-100 to-amber-50 rounded-2xl mb-8 shadow-lg shadow-amber-100">
+                    <div class="text-amber-500"><i data-lucide="megaphone" width="32" height="32"></i></div>
+                </div>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-slate-900">The Fight Continues</h2>
+                <p class="text-lg sm:text-xl text-slate-600 mb-10 leading-relaxed">
                     We need your voice and your presence. Join our mailing list to get alerts about raids, protests, and
                     community actions, and learn how to support abolition campaigns.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                     <input type="email" placeholder="Enter your email" aria-label="Email address"
-                        class="flex-1 px-6 py-4 rounded bg-slate-100 border-2 border-slate-400 focus:outline-none focus:border-activist-red focus:ring-2 focus:ring-activist-red text-base transition-all" />
+                        class="flex-1 px-6 py-4 rounded-xl bg-slate-50 border-2 border-slate-200 focus:outline-none focus:border-activist-red focus:ring-4 focus:ring-activist-red/10 text-base transition-all" />
                     <button
-                        class="bg-black hover:bg-slate-800 text-white font-bold py-4 px-8 rounded transition-all flex items-center justify-center text-base hover:scale-105 shadow-lg hover:shadow-xl">
-                        Join Us <i data-lucide="chevron-right" width="18" class="ml-1"></i>
+                        class="btn-primary whitespace-nowrap">
+                        Join Us <i data-lucide="arrow-right" width="18" class="ml-1"></i>
                     </button>
                 </div>
                 <p class="mt-4 text-sm text-slate-500">We will never share your information. Safety first.</p>
-                <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+                <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="https://immigrantjustice.org/for-immigrants/know-your-rights/ice-encounter/"
                         target="_blank" rel="noopener noreferrer"
-                        class="border-2 border-activist-red text-activist-red hover:bg-activist-red hover:text-white font-bold py-3 px-6 rounded transition-all text-center">
+                        class="btn-outline">
                         Know Your Rights Toolkit
                     </a>
                     <a href="https://en.wikipedia.org/wiki/Abolish_ICE" target="_blank" rel="noopener noreferrer"
-                        class="border-2 border-black text-black hover:bg-black hover:text-white font-bold py-3 px-6 rounded transition-all text-center">
+                        class="btn-outline-dark">
                         Learn the Movement History
                     </a>
                 </div>
@@ -312,79 +370,102 @@
         </section>
 
         <!-- Crypto Donations -->
-        <section id="donate" class="py-16 md:py-24 bg-slate-100 border-t-2 border-slate-200">
+        <section id="donate" class="py-20 md:py-28 bg-gradient-to-br from-slate-100 to-slate-50">
             <div class="max-w-5xl mx-auto px-4">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <div class="inline-block p-3 bg-red-100 rounded-full mb-6">
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-red-100 to-red-50 rounded-2xl mb-8 shadow-lg shadow-red-100">
                         <div class="text-activist-red"><i data-lucide="heart" width="32" height="32"></i></div>
                     </div>
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-slate-900">Support the Movement</h2>
-                    <p class="text-lg sm:text-xl text-slate-700 leading-relaxed">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-slate-900">Support the Movement</h2>
+                    <p class="text-lg sm:text-xl text-slate-600 leading-relaxed">
                         Crypto donations keep rapid-response alerts, legal support, and community defense networks ready.
                     </p>
                 </div>
-                <div class="card-surface rounded-lg p-6 sm:p-8 border-l-4 border-activist-red">
+                <div class="modern-card rounded-2xl p-8 sm:p-10">
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-                        <div>
-                            <h3 class="text-xl sm:text-2xl font-bold mb-2 text-slate-900">Bitcoin (BTC)</h3>
-                            <p class="text-slate-700">Send a donation to support mutual aid and rapid response work.</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-white">
+                                <i data-lucide="bitcoin" width="24" height="24"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl sm:text-2xl font-bold text-slate-900">Bitcoin (BTC)</h3>
+                                <p class="text-slate-600">Support mutual aid and rapid response work</p>
+                            </div>
                         </div>
-                        <div
-                            class="bg-activist-black text-white px-4 py-3 rounded-lg text-sm sm:text-base wallet-address">
+                        <div class="bg-slate-900 text-white px-5 py-4 rounded-xl text-sm sm:text-base wallet-address font-mono">
                             bc1q6kcdzql3q5jqdqcvlnnzrqum2f9rtufep2hysm
                         </div>
                     </div>
-                    <p class="mt-4 text-sm text-slate-500">Double-check the address before sending.</p>
+                    <p class="mt-6 text-sm text-slate-500 flex items-center gap-2">
+                        <i data-lucide="info" width="16" height="16"></i>
+                        Double-check the address before sending.
+                    </p>
                 </div>
             </div>
         </section>
 
         <!-- Resources Links -->
-        <section id="resources" class="py-16 md:py-24 bg-slate-50 border-t-2 border-slate-300">
+        <section id="resources" class="py-20 md:py-28 bg-white">
             <div class="max-w-7xl mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-10 text-slate-900">Community Resources</h2>
+                <div class="text-center mb-14">
+                    <span class="inline-block px-4 py-2 rounded-full bg-slate-100 text-slate-600 font-semibold text-sm mb-4">HELPFUL LINKS</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Community Resources</h2>
+                </div>
                 <div class="grid md:grid-cols-3 gap-6">
                     <a href="https://immigrantjustice.org/for-immigrants/know-your-rights/ice-encounter/" target="_blank"
                         rel="noopener noreferrer"
-                        class="flex items-center p-6 card-surface rounded transition-all border-l-4 border-blue-500 hover:-translate-y-1">
-                        <div class="mr-4 text-blue-500"><i data-lucide="book-open" width="24" height="24"></i></div>
-                        <div>
-                            <h4 class="font-bold text-slate-900">Know Your Rights</h4>
-                            <p class="text-sm text-slate-600">ICE encounter guidance from NIJC</p>
+                        class="resource-card group">
+                        <div class="resource-icon bg-blue-500">
+                            <i data-lucide="book-open" width="24" height="24"></i>
                         </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Know Your Rights</h4>
+                            <p class="text-sm text-slate-500">ICE encounter guidance from NIJC</p>
+                        </div>
+                        <i data-lucide="arrow-up-right" width="20" height="20" class="ml-auto text-slate-300 group-hover:text-blue-500 transition-colors"></i>
                     </a>
                     <a href="https://wearecasa.org/policy-agenda/immigration/abolishice/" target="_blank"
                         rel="noopener noreferrer"
-                        class="flex items-center p-6 card-surface rounded transition-all border-l-4 border-green-500 hover:-translate-y-1">
-                        <div class="mr-4 text-green-500"><i data-lucide="users" width="24" height="24"></i></div>
-                        <div>
-                            <h4 class="font-bold text-slate-900">Policy Agenda</h4>
-                            <p class="text-sm text-slate-600">Community-driven abolition platform</p>
+                        class="resource-card group">
+                        <div class="resource-icon bg-emerald-500">
+                            <i data-lucide="users" width="24" height="24"></i>
                         </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">Policy Agenda</h4>
+                            <p class="text-sm text-slate-500">Community-driven abolition platform</p>
+                        </div>
+                        <i data-lucide="arrow-up-right" width="20" height="20" class="ml-auto text-slate-300 group-hover:text-emerald-500 transition-colors"></i>
                     </a>
                     <a href="https://fuckice.org/" target="_blank" rel="noopener noreferrer"
-                        class="flex items-center p-6 card-surface rounded transition-all border-l-4 border-purple-500 hover:-translate-y-1">
-                        <div class="mr-4 text-purple-500"><i data-lucide="shield" width="24" height="24"></i></div>
-                        <div>
-                            <h4 class="font-bold text-slate-900">Abolition Brief</h4>
-                            <p class="text-sm text-slate-600">Why ICE must be dismantled</p>
+                        class="resource-card group">
+                        <div class="resource-icon bg-purple-500">
+                            <i data-lucide="shield" width="24" height="24"></i>
                         </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 group-hover:text-purple-600 transition-colors">Abolition Brief</h4>
+                            <p class="text-sm text-slate-500">Why ICE must be dismantled</p>
+                        </div>
+                        <i data-lucide="arrow-up-right" width="20" height="20" class="ml-auto text-slate-300 group-hover:text-purple-500 transition-colors"></i>
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- Downloadable Know Your Rights Card -->
-        <section class="py-12 md:py-16 bg-activist-black text-white">
-            <div class="max-w-3xl mx-auto px-4 text-center">
-                <div class="border-2 border-dashed border-activist-red rounded-lg p-8 md:p-10 pulse-border bg-gradient-to-br from-transparent to-red-900/10">
-                    <i data-lucide="download" class="mx-auto mb-4 text-activist-red" width="40" height="40"></i>
-                    <h3 class="text-2xl md:text-3xl font-bold mb-3">Download Your Rights Card</h3>
-                    <p class="text-gray-300 text-lg mb-6">Print this card and keep it with you at all times</p>
+        <section class="py-16 md:py-20 cta-gradient text-white relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+            <div class="max-w-3xl mx-auto px-4 text-center relative z-10">
+                <div class="glass-card rounded-2xl p-10 md:p-12">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-activist-red to-red-600 rounded-2xl mb-6 shadow-lg">
+                        <i data-lucide="download" width="28" height="28" class="text-white"></i>
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4">Download Your Rights Card</h3>
+                    <p class="text-gray-300 text-lg mb-8">Print this card and keep it with you at all times</p>
                     <a href="https://immigrantjustice.org/for-immigrants/know-your-rights/ice-encounter/"
                         target="_blank" rel="noopener noreferrer"
-                        class="inline-block bg-activist-red hover:bg-red-700 text-white font-bold py-4 px-8 rounded transition-all text-lg shadow-lg hover:shadow-xl hover:scale-105">
+                        class="btn-primary inline-flex">
                         View ICE Encounter Guide
+                        <i data-lucide="external-link" width="18" height="18" class="ml-2"></i>
                     </a>
                 </div>
             </div>
@@ -392,26 +473,27 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-zinc-900 text-slate-400 py-16 border-t-4 border-activist-red">
+    <footer class="footer-gradient text-slate-400 py-16">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-10">
                 <div class="flex items-center space-x-3 mb-6 md:mb-0">
+                    <img src="./logo.jpg" alt="Rights Over Raids" class="w-10 h-10 rounded-full border-2 border-activist-red/30">
                     <span class="font-bold text-white uppercase tracking-wider text-xl">Rights Over Raids</span>
                 </div>
-                <div class="flex space-x-8">
-                    <a href="#" class="hover:text-white transition-colors hover:scale-110 transform duration-200" aria-label="Twitter">
-                        <i data-lucide="twitter" width="24" height="24"></i>
+                <div class="flex space-x-6">
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <i data-lucide="twitter" width="20" height="20"></i>
                     </a>
-                    <a href="#" class="hover:text-white transition-colors hover:scale-110 transform duration-200" aria-label="Instagram">
-                        <i data-lucide="instagram" width="24" height="24"></i>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i data-lucide="instagram" width="20" height="20"></i>
                     </a>
-                    <a href="#" class="hover:text-white transition-colors hover:scale-110 transform duration-200" aria-label="Contact">
-                        <i data-lucide="mail" width="24" height="24"></i>
+                    <a href="#" class="social-icon" aria-label="Contact">
+                        <i data-lucide="mail" width="20" height="20"></i>
                     </a>
                 </div>
             </div>
-            <div class="text-center md:text-left">
-                <p class="text-sm">© 2026 Rights Over Raids. All Power to the People.</p>
+            <div class="border-t border-slate-800 pt-8 text-center md:text-left">
+                <p class="text-sm text-slate-500">© 2026 Rights Over Raids. All Power to the People.</p>
             </div>
         </div>
     </footer>
